@@ -1,0 +1,11 @@
+Book added: Java Programming
+Book added: Data Structures
+Book added: Algorithms
+Book issued: Java Programming to John
+Book issued: Data Structures to John
+Book issued: Algorithms to John
+Failed to issue book: Algorithms
+Book returned: Java Programming by John
+Book issued: Algorithms to Dr. Smith
+Book removed: Data Structures
+Book not found: Data Structures

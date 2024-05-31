@@ -1,0 +1,69 @@
+import java.util.Scanner;
+
+public class T1 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Prompt and read the first integer
+        System.out.println("Enter 1st number: ");
+        int fno = sc.nextInt();
+
+        // Prompt and read the second integer
+        System.out.println("Enter 2nd number: ");
+        int sno = sc.nextInt();
+
+        // Prompt and read the float number
+        System.out.println("Enter float number: ");
+        float f = sc.nextFloat();
+
+        // Prompt and read the single character
+        System.out.println("Enter single character: ");
+        char ch = sc.next().charAt(0);
+
+        // Prompt and read the boolean value
+        System.out.println("Enter boolean value: ");
+        boolean b = sc.nextBoolean();
+
+        // Consume the leftover newline character
+        sc.nextLine();
+
+        // Prompt and read the user's name
+        System.out.println("Enter your name: ");
+        String name = sc.nextLine();
+
+        // Calculate sum, difference, and product of the two integers
+        int sum = fno + sno;
+        int difference = fno - sno;
+        int product = fno * sno;
+
+        // Calculate the next character in the ASCII sequence
+        char nextChar = (char) (ch + 1);
+
+        // Calculate the opposite of the boolean value
+        boolean oppositeBool = !b;
+
+        // Close the scanner to avoid resource leak
+        sc.close();
+
+        // Output all the entered values for verification
+        System.out.println("You entered the first number: " + fno);
+        System.out.println("You entered the second number: " + sno);
+        System.out.println("You entered the float number: " + f);
+        System.out.println("You entered the character: " + ch);
+        System.out.println("You entered the boolean value: " + b);
+        System.out.println("You entered the name: " + name);
+
+        // Output the sum, difference, and product
+        System.out.println("Sum of the two numbers: " + sum);
+        System.out.println("Difference of the two numbers: " + difference);
+        System.out.println("Product of the two numbers: " + product);
+
+        // Output the next character in the ASCII sequence
+        System.out.println("The next character in the ASCII sequence after '" + ch + "' is: '" + nextChar + "'");
+
+        // Output the opposite of the entered boolean value
+        System.out.println("The opposite of the boolean value '" + b + "' is: '" + oppositeBool + "'");
+        System.out.println("Hello, " + name + "!");
+      
+    }
+}

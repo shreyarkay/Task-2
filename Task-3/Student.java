@@ -15,7 +15,7 @@ public class Student {
         this.address = address;
     }
 
-    // Getters
+    
     public int getId() {
         return id;
     }
@@ -36,7 +36,7 @@ public class Student {
         return address;
     }
 
-    // Setters
+   
     public void setName(String name) {
         this.name = name;
     }

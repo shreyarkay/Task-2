@@ -17,18 +17,18 @@ public class Main {
 
             System.out.print("Enter your choice: ");
             int choice = scanner.nextInt();
-            scanner.nextLine();  // Consume newline
+            scanner.nextLine();  
 
             switch (choice) {
                 case 1:
                     System.out.print("Enter student ID: ");
                     int id = scanner.nextInt();
-                    scanner.nextLine();  // Consume newline
+                    scanner.nextLine();  
                     System.out.print("Enter name: ");
                     String name = scanner.nextLine();
                     System.out.print("Enter age: ");
                     int age = scanner.nextInt();
-                    scanner.nextLine();  // Consume newline
+                    scanner.nextLine();  
                     System.out.print("Enter grade: ");
                     String grade = scanner.nextLine();
                     System.out.print("Enter address: ");
@@ -54,7 +54,7 @@ public class Main {
                 case 3:
                     System.out.print("Enter student ID to update: ");
                     int updateId = scanner.nextInt();
-                    scanner.nextLine();  // Consume newline
+                    scanner.nextLine();  
                     System.out.print("Enter new name (leave blank to keep current): ");
                     String newName = scanner.nextLine();
                     System.out.print("Enter new age (leave blank to keep current): ");

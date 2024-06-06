@@ -1,0 +1,78 @@
+
+1. Add Student
+2. Remove Student
+3. Update Student
+4. Search Student
+5. Display All Students
+6. Load from File
+7. Save to File
+8. Exit
+Enter your choice: 1
+Enter student ID: 001
+Enter name: Sheryl
+Enter age: 20
+Enter grade: A
+Enter address: 12, Baker St.    
+Student added successfully.
+
+1. Add Student
+2. Remove Student
+3. Update Student
+4. Search Student
+5. Display All Students
+6. Load from File
+7. Save to File
+8. Exit
+Enter your choice: 1
+Enter student ID: 002
+Enter name: Aaron
+Enter age: 18
+Enter grade: B
+Enter address: 273, Orchard Road, Singapore
+Student added successfully.
+
+1. Add Student
+2. Remove Student
+3. Update Student
+4. Search Student
+5. Display All Students
+6. Load from File
+7. Save to File
+8. Exit
+Enter your choice: 5
+ID: 1, Name: Sheryl, Age: 20, Grade: A, Address: 12, Baker St.
+ID: 2, Name: Aaron, Age: 18, Grade: B, Address: 273, Orchard Road, Singapore
+
+1. Add Student
+2. Remove Student
+3. Update Student
+4. Search Student
+5. Display All Students
+6. Load from File
+7. Save to File
+8. Exit
+Enter your choice: 7
+Enter filename to save to: students.dat
+Data saved successfully.
+
+1. Add Student
+2. Remove Student
+3. Update Student
+4. Search Student
+5. Display All Students
+6. Load from File
+7. Save to File
+8. Exit
+Enter your choice: 6
+Enter filename to load from: students.dat
+Data loaded successfully.
+
+1. Add Student
+2. Remove Student
+3. Update Student
+4. Search Student
+5. Display All Students
+6. Load from File
+7. Save to File
+8. Exit
+Enter your choice: 8

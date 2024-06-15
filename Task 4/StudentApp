@@ -11,7 +11,7 @@ public class StudentApp {
         while (true) {
             printMenu();
             int choice = scanner.nextInt();
-            scanner.nextLine();  // Consume newline
+            scanner.nextLine();  
 
             switch (choice) {
                 case 1:
@@ -55,7 +55,7 @@ public class StudentApp {
         String name = scanner.nextLine();
         System.out.print("Enter age: ");
         int age = scanner.nextInt();
-        scanner.nextLine();  // Consume newline
+        scanner.nextLine();  
         System.out.print("Enter grade: ");
         String grade = scanner.nextLine();
         System.out.print("Enter address: ");
@@ -87,7 +87,7 @@ public class StudentApp {
     private static void updateStudent() {
         System.out.print("Enter student ID to update: ");
         Long id = scanner.nextLong();
-        scanner.nextLine();  // Consume newline
+        scanner.nextLine();  
         Student existingStudent = studentService.getStudentById(id);
         if (existingStudent == null) {
             System.out.println("Student not found.");
@@ -98,7 +98,7 @@ public class StudentApp {
         String name = scanner.nextLine();
         System.out.print("Enter new age: ");
         int age = scanner.nextInt();
-        scanner.nextLine();  // Consume newline
+        scanner.nextLine();  
         System.out.print("Enter new grade: ");
         String grade = scanner.nextLine();
         System.out.print("Enter new address: ");

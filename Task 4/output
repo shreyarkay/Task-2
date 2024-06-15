@@ -1,0 +1,80 @@
+Student Management System
+1. Add a new student
+2. View all students
+3. View a student by ID
+4. Update a student
+5. Delete a student
+6. Exit
+Enter your choice: 1
+Enter name: Alex
+Enter age: 17
+Enter grade: A
+Enter address: Orchard Rd, Singapore
+Student added successfully!
+Student Management System
+1. Add a new student
+2. View all students
+3. View a student by ID
+4. Update a student
+5. Delete a student
+6. Exit
+Enter your choice: 2
+Student{id=1, name='Alex', age=17, grade='A', address='Orchard Rd, Singapore'}
+Student Management System
+1. Add a new student
+2. View all students
+3. View a student by ID
+4. Update a student
+5. Delete a student
+6. Exit
+Enter your choice: 1
+Enter name: Bree
+Enter age: 20
+Enter grade: C
+Enter address: Bangalore, India
+Student added successfully!
+Student Management System
+1. Add a new student
+2. View all students
+3. View a student by ID
+4. Update a student
+5. Delete a student
+6. Exit
+Enter your choice: 3
+Enter student ID: 2
+Student{id=2, name='Bree', age=20, grade='C', address='Bangalore, India'}
+Student Management System
+1. Add a new student
+2. View all students
+3. View a student by ID
+4. Update a student
+5. Delete a student
+6. Exit
+Enter your choice: 1
+Enter name: Chloe
+Enter age: 21
+Enter grade: B
+Enter address: New York, USA
+Student added successfully!
+Student Management System
+1. Add a new student
+2. View all students
+3. View a student by ID
+4. Update a student
+5. Delete a student
+6. Exit
+Enter your choice: 4
+Enter student ID to update: 1
+Enter new name: Aaron
+Enter new age: 19
+Enter new grade: B
+Enter new address: London, UK
+Student updated successfully!
+Student Management System
+1. Add a new student
+2. View all students
+3. View a student by ID
+4. Update a student
+5. Delete a student
+6. Exit
+Enter your choice: 

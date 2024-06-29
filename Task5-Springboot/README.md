@@ -20,3 +20,14 @@ The Student Management System is a Spring Boot application designed to manage st
    ```bash
    git clone https://github.com/your-username/student-management-system.git
    cd student-management-system
+2. **Configure the database**
+   Create a MySQL database
+3. **Build the Application with RESTful Endpoints**
+   The following endpoints are available:
+   POST /students
+   GET /students
+   GET /students/{id}
+   PUT /students/{id}
+   DELETE /students/{id}
+   
+   

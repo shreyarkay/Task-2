@@ -6,7 +6,7 @@ This is a Spring Boot application for managing an Employee Directory. The applic
 - Spring Boot
 - Spring Data JPA
 - Hibernate
-- H2 Database (can be replaced with other relational databases)
+- SQL Database
 - Maven
 
 ### Prerequisites

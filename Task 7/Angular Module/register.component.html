@@ -1,0 +1,20 @@
+<p>register works!</p>
+<div class="register-container">
+    <mat-card>
+      <mat-card-title>Register</mat-card-title>
+      <form (ngSubmit)="register()" #registerForm="ngForm">
+        <mat-form-field appearance="fill">
+          <mat-label>Username</mat-label>
+          <input matInput [(ngModel)]="username" name="username" required>
+        </mat-form-field>
+  
+        <mat-form-field appearance="fill">
+          <mat-label>Password</mat-label>
+          <input matInput [(ngModel)]="password" name="password" type="password" required>
+        </mat-form-field>
+  
+        <button mat-raised-button color="primary" type="submit">Register</button>
+      </form>
+    </mat-card>
+  </div>
+  

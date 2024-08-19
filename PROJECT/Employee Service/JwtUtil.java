@@ -3,6 +3,8 @@ package com.example.EMS.security;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
+
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Component;
 
 import java.util.Date;
@@ -39,4 +41,14 @@ public class JwtUtil {
     public boolean validateToken(String token, String username) {
         return (username.equals(extractUsername(token)) && !isTokenExpired(token));
     }
+
+	public boolean validateToken(String jwtToken, UserDetails userDetails) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	public String generateToken(UserDetails userDetails) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

@@ -1,44 +1,46 @@
 package com.example.EMS.config;
-import com.example.security.JwtUtil;
-import com.example.security.JwtAuthenticationFilter;
+
+import com.example.EMS.security.JwtRequestFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
-import org.springframework.security.config.annotation.web.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
-import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.config.http.SessionCreationPolicy;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 @Configuration
 @EnableWebSecurity
-public class SecurityConfig extends WebSecurityConfigurerAdapter {
+@EnableGlobalMethodSecurity(prePostEnabled = true)
+public class SecurityConfig {
 
-	    @Autowired
-	    private JwtUtil jwtUtil;
+    @Autowired
+    private UserDetailsService userDetailsService;
 
-	    @Bean
-	    public PasswordEncoder passwordEncoder() {
-	        return new BCryptPasswordEncoder();
-	    }
+    @Autowired
+    private JwtRequestFilter jwtRequestFilter;
 
-	    @Override
-	    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-	        // Use your UserDetailsService for real application
-	        auth.inMemoryAuthentication()
-	            .withUser("user")
-	            .password(passwordEncoder().encode("password"))
-	            .roles("USER");
-	    }
+    @Bean
+    public PasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
+    }
 
-	    @Override
-	    protected void configure(HttpSecurity http) throws Exception {
-	        http.csrf().disable()
-	            .authorizeRequests()
-	            .antMatchers("/login", "/register").permitAll()
-	            .antMatchers("/employees/**").authenticated()
-	            .and()
-	            .addFilter(new JwtAuthenticationFilter(authenticationManager(), jwtUtil));
-	    }
-	}
+    @Bean
+    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+        http.csrf().disable()
+            .authorizeRequests()
+            .requestMatchers("/auth/register", "/auth/login").permitAll()
+            .anyRequest().authenticated()
+            .and()
+            .sessionManagement()
+            .sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+        
+        http.addFilterBefore(jwtRequestFilter, UsernamePasswordAuthenticationFilter.class);
+        return http.build();
+    }
+}
